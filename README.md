@@ -1,4 +1,3 @@
-/opt/homebrew/Library/Homebrew/cmd/shellenv.sh: line 18: /bin/ps: Operation not permitted
 # 医学中文写作 Skill
 
 `write-medical-chinese` 是一套面向中文医学写作的 Codex Skill，适用于医学文本的撰写、改写、润色、压缩、扩写和审校。
