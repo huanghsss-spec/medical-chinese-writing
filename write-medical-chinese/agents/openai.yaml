@@ -1,4 +1,4 @@
 interface:
   display_name: "医学中文写作"
-  short_description: "规范撰写、衔接、改写和审校中文医学文本，支持论文与标书模式"
-  default_prompt: "使用 $write-medical-chinese 处理以下中文医学文本并改善篇章衔接；如未指定模式，请先说明 Journal 与 Grant 的区别、给出推荐并让我选择。"
+  short_description: "从内容型总纲到成稿的医学中文写作系统，支持标书与论文"
+  default_prompt: "使用 $write-medical-chinese 读取或建立项目写作主控文档，选择 Grant 或 Journal，并按需要完成全文建构、局部构篇或语言精修。"
