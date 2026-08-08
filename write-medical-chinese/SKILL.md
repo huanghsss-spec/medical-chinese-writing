@@ -90,7 +90,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 正式分级标题中的编号标题默认各级加粗；正文编号列举不自动加粗。官方模板或用户明确要求优先，并把稳定选择记录到 `OUTPUT_STYLE.md`。
 
-生物医学名称中的阳性、价态或电荷“+”默认使用上标。纯文本或Markdown使用“⁺”，富文本优先设置真正的上标格式。上标“⁺”后紧接英文时不留空格，如 `CD8⁺T细胞`；后接中文时留一个半角空格，如 `HER2⁺ 乳腺癌`；位于句末或标点前时不添加空格。官方规范或用户明确要求优先。
+生物医学特殊符号按完整表达的语义处理。区分阳性/阴性标记、离子电荷、价态、自由基、同位素、化学式原子数、基因型、运算符、范围和连字符，再决定上标、下标或基线。纯文本使用规范Unicode字符，富文本只对承担相应语义的字符应用真正的上下标格式；不得依赖固定词表或单字符替换。详细规则见 [biomedical-notation-and-rich-text.md](references/biomedical-notation-and-rich-text.md)。
 
 ## 4. 自动路由写作层级
 
@@ -123,6 +123,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 根据当前任务读取直接参考文件，不要无条件加载全部内容：
 
 - 所有撰写、改写和审计任务：读取 [narrative-quality-baseline.md](references/narrative-quality-baseline.md) 与 [terminology-and-register.md](references/terminology-and-register.md)；
+- 涉及上标、下标、表型标记、离子、化学式、同位素、基因型或富文本符号排版：读取 [biomedical-notation-and-rich-text.md](references/biomedical-notation-and-rich-text.md)；
 - 涉及主控索引、跨文件项目或持续写作：读取 [project-context-and-master-brief.md](references/project-context-and-master-brief.md)；
 - 涉及指南、大纲、完整文档、初稿或章节规划：读取 [content-outline-and-guide.md](references/content-outline-and-guide.md)；
 - 涉及全文建构、局部构篇、压缩、扩写、过渡或节奏：读取 [document-architecture-and-pacing.md](references/document-architecture-and-pacing.md) 与 [cohesion-and-transitions.md](references/cohesion-and-transitions.md)；
@@ -156,6 +157,8 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 ### 决策来源账本
 
 区分官方要求、用户明确确认、材料直接事实、系统推定、系统推荐和待外部核实。系统推定或推荐不得自动升级为用户已经确认的项目事实。
+
+同时记录决定的准确作用域和适用条件，至少区分当前句、当前段、当前章节、当前交付物、当前项目和 Skill 通用规则。局部人工改写或一次性模板选择不得自动概括为全文统一口径；扩大作用域必须有新的明确依据。
 
 ## 7. 应用内置叙事质量基线
 
@@ -250,9 +253,10 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 19. 是否补充没有来源的新事实、数据、文献或结论；
 20. 是否应更新对应项目模块，且只回写有明确来源和状态的决定；
 21. 正式编号分级标题是否各级加粗，正文编号列举是否保持普通格式；
-22. 生物医学名称中的“+”是否已上标，且后接英文或中文时空格正确。
+22. 生物医学符号是否已按完整表达的语义设置上标、下标或基线，且空格正确。
 23. 凝练是否删除了必要的主语、关系词、“的”字结构或自然承接，形成机器式名词堆叠；
 24. Grant是否连续以审稿式语言评价外部成果，或用宽泛的“因果”替代可说明的具体技术关系。
 25. 指南关联章节是否区分具体内容映射、总体支撑和指标落实，且没有把内部豁免或资源配置推理写成防守性正文；
 26. 官方模板是否优先填充预留段落并继承既有样式，未无故增加空段、重建层级或全局重设格式；
-27. 阳性标记的“+”是否根据生物医学语义识别并设置上标，而非依赖固定后缀或少量词表。
+27. 富文本是否只格式化正确的字符或字符组，并同时通过视觉和文本可检索性核验。
+28. 用户确认的修改是否记录了准确作用域、适用条件和例外，且未把句级或模板级决定错误扩大为全文规则。
