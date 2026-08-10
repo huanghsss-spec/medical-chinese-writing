@@ -1,13 +1,13 @@
 ---
 name: write-medical-chinese
-description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、技术路线、创新性和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start a Chinese biomedical document from guidelines, outlines, notes, literature, data, or preliminary results; continue a project without losing its purpose and decisions; or edit an existing text while preserving facts, data, citations, evidence strength, causal boundaries, uncertainty, scope, narrative coherence, and reader comprehension.
+description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、技术路线、创新性和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, or finalized sections; maintain longitudinal consistency from overview and scientific question through objectives, content, methods, routes, endpoints, indicators, conclusions, and innovation; or edit existing text while preserving facts, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
 ---
 
 # 医学中文写作
 
 ## 核心定位
 
-把本 Skill 作为项目级医学写作系统，而不只是成稿后的润色器。围绕写作目的、目标读者、指南要求和核心科学问题，依次处理项目上下文、内容型总纲、全文结构、局部构篇、专业可读性和语言表达。
+把本 Skill 作为项目级医学写作系统，而不只是成稿后的润色器。围绕写作目的、目标读者、指南要求和核心科学问题，依次处理项目上下文、内容型总纲、全文纵向一致性、全文结构、局部构篇、专业可读性和语言表达。
 
 始终保护医学事实、数据、来源、证据强度、因果边界、适用范围和用户已经确认的项目决策。把词语、句式、研究设计和文档结构示例视为非穷举示例；根据语义功能主动泛化，不得把示例变成固定替换表。
 
@@ -17,7 +17,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 按以下顺序执行：
 
-> 读取或建立写作主控索引 → 按需读取项目控制模块 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构审计 → 专业可读性与语言审计 → 回写已确认的项目级决策
+> 读取或建立写作主控索引 → 按需读取项目控制模块 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策与传播状态
 
 不得先润色局部句子，再倒推全文目的。即使只处理一段文字，也要先识别其所属交付物、章节功能和段落任务。
 
@@ -29,12 +29,13 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 - `PROJECT_FACTS.md`：稳定科学事实、前期结果、术语和证据边界；
 - `CONTENT_OUTLINE.md`：中心命题、章节功能、精炼内容和跨章节对应；
+- `CONSISTENCY_LEDGER.md`：稳定节点、核心锚点、章节实现、变更传播和全文一致性状态；
 - `SECTION_BRIEFS/`：章节任务书；
 - `EVIDENCE_LEDGER.md`：主张、来源、证据状态和引文对应；
 - `DECISION_LOG.md`：官方要求、用户确认、系统推定和废止决定；
 - `OUTPUT_STYLE.md`：页面、字体、图表、引文和交付格式。
 
-建立模块时分别使用 [PROJECT_FACTS.template.md](assets/PROJECT_FACTS.template.md)、[CONTENT_OUTLINE.template.md](assets/CONTENT_OUTLINE.template.md)、[SECTION_BRIEF.template.md](assets/SECTION_BRIEF.template.md)、[EVIDENCE_LEDGER.template.md](assets/EVIDENCE_LEDGER.template.md)、[DECISION_LOG.template.md](assets/DECISION_LOG.template.md) 和 [OUTPUT_STYLE.template.md](assets/OUTPUT_STYLE.template.md)。
+建立模块时分别使用 [PROJECT_FACTS.template.md](assets/PROJECT_FACTS.template.md)、[CONTENT_OUTLINE.template.md](assets/CONTENT_OUTLINE.template.md)、[CONSISTENCY_LEDGER.template.md](assets/CONSISTENCY_LEDGER.template.md)、[SECTION_BRIEF.template.md](assets/SECTION_BRIEF.template.md)、[EVIDENCE_LEDGER.template.md](assets/EVIDENCE_LEDGER.template.md)、[DECISION_LOG.template.md](assets/DECISION_LOG.template.md) 和 [OUTPUT_STYLE.template.md](assets/OUTPUT_STYLE.template.md)。
 
 若不存在主控索引：
 
@@ -72,6 +73,8 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 处理新项目、完整初稿、全文重构或指南约束下的章节写作时，先获取可用的申报指南、模板、投稿要求、学校规范、现有大纲和基础文档。若用户没有大纲，主动协助建立。
 
 把标题目录扩展为内容型总纲：整合当前重要信息的精炼表示、统领性问题、章节功能、读者路径、核心判断、证据、团队基础、字数预算、来源和处理状态。具体方法见 [content-outline-and-guide.md](references/content-outline-and-guide.md)。
+
+对完整或持续性标书、论文和研究方案，在内容型总纲形成后建立 `CONSISTENCY_LEDGER.md`。把指南、中心命题、问题、假设、目标、内容、方法、路线、终点、指标、结果、创新、团队基础和风险分配稳定节点，并区分精确锚点、语义锚点和递进细化。具体方法见 [longitudinal-consistency.md](references/longitudinal-consistency.md)。
 
 没有内容型总纲时，可以盘点材料、诊断问题和拟定总纲，但默认不进入完整正式成稿。用户明确要求直接完成时，仍应先在内部建立总纲，再继续写作。
 
@@ -125,6 +128,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - 所有撰写、改写和审计任务：读取 [narrative-quality-baseline.md](references/narrative-quality-baseline.md) 与 [terminology-and-register.md](references/terminology-and-register.md)；
 - 涉及上标、下标、表型标记、离子、化学式、同位素、基因型或富文本符号排版：读取 [biomedical-notation-and-rich-text.md](references/biomedical-notation-and-rich-text.md)；
 - 涉及主控索引、跨文件项目或持续写作：读取 [project-context-and-master-brief.md](references/project-context-and-master-brief.md)；
+- 涉及持续项目中的任何章节撰写、重构、润色或审计：读取 [longitudinal-consistency.md](references/longitudinal-consistency.md)，并加载 `CONSISTENCY_LEDGER.md` 中与当前章节有关的上游、当前及直接下游节点切片；
 - 涉及指南、大纲、完整文档、初稿或章节规划：读取 [content-outline-and-guide.md](references/content-outline-and-guide.md)；
 - 涉及全文建构、局部构篇、压缩、扩写、过渡或节奏：读取 [document-architecture-and-pacing.md](references/document-architecture-and-pacing.md) 与 [cohesion-and-transitions.md](references/cohesion-and-transitions.md)；
 - 选择 `Grant`：读取 [grant-profile.md](references/grant-profile.md)；
@@ -139,6 +143,12 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 ## 6. 建立写作账本
 
 写作前在内部建立或更新相互关联的账本。
+
+### 全文一致性账本
+
+用稳定节点追踪同一科学命题从总纲到章节、表格、图示和附件的继承、细化与验收。精确锚点保持名称、编号、数字、终点和证据身份；语义锚点允许改写但保持主体、关系、方向和边界；递进细化必须归属于既有节点，不得把方法工具静默升级为独立目标。
+
+每次局部写作前读取相关节点切片，写作后检查覆盖、身份、关系、证据、数字、细化、漂移、传递和重复。后续定稿使上位表述发生实质变化时，先完成反向校准和影响分析，再经必要确认向上游及下游传播。
 
 ### 主张与引文账本
 
@@ -181,11 +191,12 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 ### 结构审计
 
-按三个子层检查：
+按四个子层检查：
 
 - **合规审计**：指南、模板、模块、字数、表格和提交要求；
 - **科学架构审计**：问题、假设、目标、内容、方法、终点、结果、创新和团队基础；
 - **叙事架构审计**：读者路径、章节职责、段落功能、证据位置、信息权重、逻辑桥梁、节奏和落点。
+- **纵向一致性审计**：稳定节点、核心锚点、章节继承、递进细化、变更传播，以及摘要、正文、表格、图示和附件之间的一致性。
 
 输出结构状态时分别报告四类锁定状态，输出结构由相关文档工具完成视觉核验。
 
@@ -207,7 +218,8 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 2. 完整标书、论文或重大重构需要锁定合规结构和科学结构，或叙事方案存在多种实质不同选择；
 3. 不同材料在事实、数据、成果归属或证据状态上冲突；
 4. 用户授权为语言润色，但完成任务需要重大结构调整或删除重要证据；
-5. 准备最终提交时仍有未发表结果、敏感内容、待核实数据或合规风险。
+5. 后续细化改变已经锁定的科学问题、目标、任务、终点、指标、创新点或定稿文件；
+6. 准备最终提交时仍有未发表结果、敏感内容、待核实数据或合规风险。
 
 确认时集中展示四类结构状态、核心决定、仍属系统推荐的内容和待核实事项。术语统一、普通句序、必要过渡、内容配额核对、字数统计、来源映射和常规审计自动执行，不反复询问。
 
@@ -219,6 +231,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 - 科学事实和证据边界写入 `PROJECT_FACTS.md`；
 - 章节结构和读者路径写入 `CONTENT_OUTLINE.md` 或章节任务书；
+- 稳定节点、章节实现、受控变体、冲突和传播状态写入 `CONSISTENCY_LEDGER.md`；
 - 主张和引文变化写入 `EVIDENCE_LEDGER.md`；
 - 决策来源与状态写入 `DECISION_LOG.md`；
 - 稳定版式写入 `OUTPUT_STYLE.md`；
@@ -260,3 +273,6 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 26. 官方模板是否优先填充预留段落并继承既有样式，未无故增加空段、重建层级或全局重设格式；
 27. 富文本是否只格式化正确的字符或字符组，并同时通过视觉和文本可检索性核验。
 28. 用户确认的修改是否记录了准确作用域、适用条件和例外，且未把句级或模板级决定错误扩大为全文规则。
+29. 当前章节是否读取了相关一致性节点，并完整继承必须保留的精确锚点与语义锚点。
+30. 新增方法、路线、终点、指标和创新是否具有上游来源，且未形成未经确认的孤立任务或承诺。
+31. 后续定稿产生的实质变化是否已反向校准总纲，并完成所有受影响章节的传播或明确标记待确认。
