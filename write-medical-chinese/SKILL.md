@@ -1,6 +1,6 @@
 ---
 name: write-medical-chinese
-description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、技术路线、创新性和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; maintain longitudinal consistency from overview and scientific question through objectives, content, methods, routes, endpoints, indicators, conclusions, and innovation; compare authorized human revisions without overgeneralizing local choices; or edit existing text while preserving facts, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
+description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、任务分解、技术路线、概念性结构图、创新性和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; maintain longitudinal consistency from overview and scientific question through objectives, content, task decomposition, methods, routes, endpoints, indicators, conclusions, innovation, and conceptual diagrams; compare authorized human revisions without overgeneralizing local choices; or edit existing text while preserving facts, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
 ---
 
 # 医学中文写作
@@ -133,6 +133,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - 涉及全文建构、局部构篇、压缩、扩写、过渡或节奏：读取 [document-architecture-and-pacing.md](references/document-architecture-and-pacing.md) 与 [cohesion-and-transitions.md](references/cohesion-and-transitions.md)；
 - 选择 `Grant`：读取 [grant-profile.md](references/grant-profile.md)；
 - `Grant` 中涉及研究方法、技术路线、实施方案、多研究组协作、可行性论证或代表性成果：读取 [grant-methods-and-feasibility.md](references/grant-methods-and-feasibility.md)；
+- `Grant` 中涉及任务分解、课题或研究组设置、项目设置图、任务分解图、技术路线总览图或其他概念性结构图：读取 [grant-task-decomposition-and-diagrams.md](references/grant-task-decomposition-and-diagrams.md)；
 - 选择 `Journal`：读取 [journal-profile.md](references/journal-profile.md)；
 - 涉及结果、疗效、安全性、因果关系、指南推荐、证据比较、前期结果或事实核查：读取 [evidence-and-claims.md](references/evidence-and-claims.md)；
 - 涉及特定体裁、章节或交付物：读取 [genre-and-section-rules.md](references/genre-and-section-rules.md)；
@@ -188,8 +189,9 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 7. 分配“必须具体、可以概括、限制展开”的内容配额；
 8. 根据模式分配事实、缺口、行动和贡献句的论述力度；
 9. Grant研究内容先交代科学目的和有边界的价值，再按当前任务实际需要的证据环节展开，不机械凑齐完整链条；
-10. Grant方法、技术路线和可行性章节在成稿前建立方法功能映射，再决定科学模块、技术顺序和细节配额；
-11. 生成后按章节任务书逐项验收。
+10. Grant任务分解先区分组织任务、科学模块、研究阶段和图示节点，并把任务内容与直接关系写入同一叙述单元；
+11. Grant方法、技术路线和可行性章节在成稿前建立方法功能映射，再决定科学模块、技术顺序和细节配额；
+12. 生成后按章节任务书逐项验收。
 
 重写长句时先识别其中的功能单元，删除不推进判断的低价值列举，再按“方法—所解决的问题”或“机制—结果”拆分，补足必要指代和逻辑桥梁，最后检查句长与段落节奏。同一主体和连续动作中允许主语由上下文稳定承接；主体、研究对象、模型层级、时间阶段或行动目的变化时，必须重新锚定主体。不要为了显式主语而在每句重复“本研究”或“本项目”。只把一个长句切成两个、却保留原有逗号串联和名词堆叠，不算完成重构。
 
@@ -305,10 +307,15 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 46. 研究任务是否根据实际问题选择表征、比较、关系、机制、验证和成果形成中的必要环节，未机械凑齐全链，也未把尚待形成的流程或模型写成既有成果。
 47. 人工稿中的输入错误、移动后重复、概念赘词、继承格式和无功能空段是否与用户意图分开处理。
 48. 用户指定终版时是否在该指令之后重新读取文件并计算最新摘要，旧摘要和系统稿是否正确降为历史基准。
-49. Grant方法或技术路线是否已建立“研究对象—拟回答问题—关键方法—观察或输出—验证层级”的功能映射，且没有无上游问题或下游输出的孤立技术。
+49. Grant方法或技术路线是否已建立“研究对象—拟回答问题—关键方法—形成的观察或判断—验证层级”的功能映射，且没有无上游问题或后续验证用途的孤立技术。
 50. 方法细节是否根据常规支持技术、关键判别技术、待建立方法和正式成果分配篇幅，未用常规技术名称填充字数或展示复杂度。
 51. 主语是否可由连续语境稳定承接，并在主体、对象、模型层级、时间阶段或行动目的变化时及时重新锚定。
 52. “实体名称＋表达/变化/作用/分析”等短语是否已明确所指的测量、调控、功能或关系，未因表面简化而改变科学对象。
-53. 多研究组或多课题是否说明输出、下游输入、交叉或跨层级验证及共同支撑的主张，未以空泛的“协同”或“形成体系”代替证据流。
+53. 多研究组或多课题是否说明具体研究对象、模型、观察、判断、承接用途、交叉或跨层级验证及共同支撑的主张，未以抽象输入输出、结果返回、空泛“协同”或“形成体系”代替科学关系。
 54. Grant可行性或团队基础中的代表性成果是否按“实际贡献—对当前任务或指南的支撑—引文”建立对应，且概括未超出原成果结论。
 55. 扩写是否优先补充科学关系、关键方法必要性、判断标准、验证层级和风险备选，而非仅为达到篇幅而增加常规技术清单。
+56. Grant任务分解是否分别锁定正式组织任务、科学内容模块、研究阶段和图示节点，且未根据范本框数或科学环节数机械调整正式任务。
+57. 每项任务是否同时说明科学职责和必要的前后关系，未写成彼此孤立的小型研究方案后再用空泛总结补救。
+58. 每张概念图是否具有唯一外部任务，多张图是否避免功能重复，共同科学问题是否未被误作普通流程节点。
+59. 图中每种箭头是否只表达一种关系，且起点、终点、方向、标签、遮挡和缩放可读性均经过实际渲染核验。
+60. 优秀范本图是否只迁移功能骨架，未照搬其任务数量、组织术语、节点名称、箭头数量或布局。
