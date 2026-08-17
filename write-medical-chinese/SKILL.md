@@ -1,6 +1,6 @@
 ---
 name: write-medical-chinese
-description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、任务分解、技术路线、概念性结构图、创新性和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; maintain longitudinal consistency from overview and scientific question through objectives, content, task decomposition, methods, routes, endpoints, indicators, conclusions, innovation, and conceptual diagrams; compare authorized human revisions without overgeneralizing local choices; or edit existing text while preserving facts, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
+description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、任务分解、技术路线、概念性结构图、创新性、预期效益、研究基础和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; distinguish current writing usability from final-submission verification; maintain longitudinal consistency from overview and scientific question through objectives, content, task decomposition, methods, routes, endpoints, indicators, conclusions, innovation, benefits, track record, and conceptual diagrams; compare authorized human revisions without overgeneralizing local choices; or edit existing text while preserving facts, attribution, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
 ---
 
 # 医学中文写作
@@ -17,7 +17,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 按以下顺序执行：
 
-> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环
+> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 区分事实的当前写作使用状态与提交复核状态 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环
 
 不得先润色局部句子，再倒推全文目的。即使只处理一段文字，也要先识别其所属交付物、章节功能和段落任务。
 
@@ -27,7 +27,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 推荐模块：
 
-- `PROJECT_FACTS.md`：稳定科学事实、前期结果、术语和证据边界；
+- `PROJECT_FACTS.md`：稳定科学事实、前期结果、术语、证据边界、写作使用状态和提交复核状态；
 - `CONTENT_OUTLINE.md`：中心命题、章节功能、精炼内容和跨章节对应；
 - `CONSISTENCY_LEDGER.md`：稳定节点、核心锚点、章节实现、变更传播和全文一致性状态；
 - `SECTION_BRIEFS/`：章节任务书；
@@ -134,6 +134,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - 选择 `Grant`：读取 [grant-profile.md](references/grant-profile.md)；
 - `Grant` 中涉及研究方法、技术路线、实施方案、多研究组协作、可行性论证或代表性成果：读取 [grant-methods-and-feasibility.md](references/grant-methods-and-feasibility.md)；
 - `Grant` 中涉及任务分解、课题或研究组设置、项目设置图、任务分解图、技术路线总览图或其他概念性结构图：读取 [grant-task-decomposition-and-diagrams.md](references/grant-task-decomposition-and-diagrams.md)；
+- `Grant` 中涉及创新点、先进性、预期成果、经济社会效益、申报单位研究基础、负责人科研水平、成果归属或时效性科研指标：读取 [grant-innovation-benefits-and-track-record.md](references/grant-innovation-benefits-and-track-record.md)；
 - 选择 `Journal`：读取 [journal-profile.md](references/journal-profile.md)；
 - 涉及结果、疗效、安全性、因果关系、指南推荐、证据比较、前期结果或事实核查：读取 [evidence-and-claims.md](references/evidence-and-claims.md)；
 - 涉及特定体裁、章节或交付物：读取 [genre-and-section-rules.md](references/genre-and-section-rules.md)；
@@ -165,6 +166,12 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 ### 证据角色账本
 
 区分核心锚点证据、领域现状证据、边界证据、机制桥接证据、团队基础、方法可行性和备用背景。压缩时按论证价值取舍，不平均压短所有材料。
+
+### 事实使用与提交复核状态
+
+涉及人员、成果、论文、专利、荣誉、影响力指标和前期结果时，分别记录当前是否可进入正文，以及最终提交前是否需要更新统计时点、补充证明或执行专项审计。宣布内容为新增、待核实或不可写前，先检索项目事实、证据账本和一致性节点。当前可使用与提交前待复核可以同时成立，不得互相覆盖。
+
+对时效性指标记录来源范围、统计日期、材料完整性、当前量化权限和更新触发条件。材料不完整时不从局部信息推算总量。
 
 ### 决策来源账本
 
@@ -319,3 +326,9 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 58. 每张概念图是否具有唯一外部任务，多张图是否避免功能重复，共同科学问题是否未被误作普通流程节点。
 59. 图中每种箭头是否只表达一种关系，且起点、终点、方向、标签、遮挡和缩放可读性均经过实际渲染核验。
 60. 优秀范本图是否只迁移功能骨架，未照搬其任务数量、组织术语、节点名称、箭头数量或布局。
+61. 涉及人员、成果或动态指标时，是否先检索项目控制模块，并分别记录当前写作使用状态和提交复核状态。
+62. Grant是否以积极、直接的行动和价值表达替代无功能的防御性自限，同时保留会改变证据身份、成果归属或合规状态的边界。
+63. Grant创新点是否具有比较基线、新增对象或证据能力、验证方式和直接增量，且未把固定分类或成熟技术清单当作创新。
+64. Grant预期效益是否由已锁定成果和指标向外推导，技术价值是否落到新的过程、关系或判断，且未新增销售、产品、临床推广或患者获益承诺。
+65. 代表性成果是否在内部保留精确归属；正文省略作者位次时，是否使用不会暗示个人独立完成的主体和动词。
+66. 人工稿中未发生修改的内容是否只记为“本轮未处理”，而非未经用户确认就推断为主动认可。
