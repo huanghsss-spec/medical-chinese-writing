@@ -1,6 +1,6 @@
 ---
 name: write-medical-chinese
-description: 规划、撰写、重构、润色、压缩、扩写和审校中文医学文本，并为持续项目建立可反复调用的写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本和决策记录。支持 Grant（医学基金标书、项目申请、立项依据、研究目标、任务分解、技术路线、概念性结构图、创新性、预期效益、研究基础和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），内置稳定的医学叙事质量与专业可读性基线，自动识别或联合调用全文建构、局部构篇、语言精修、结构审计和语言审计。Use when Codex needs to start or continue a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; distinguish current writing usability from final-submission verification; maintain longitudinal consistency from overview and scientific question through objectives, content, task decomposition, methods, routes, endpoints, indicators, conclusions, innovation, benefits, track record, and conceptual diagrams; compare authorized human revisions without overgeneralizing local choices; or edit existing text while preserving facts, attribution, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
+description: 规划、撰写、重构、润色、压缩、扩写、收口和审校中文医学文本，并为持续项目建立写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本、决策记录和最终交付物清单。支持 Grant（医学基金标书、项目申请、研究目标、任务分解、技术路线、进度与甘特图、项目管理、风险分析、创新性、预期效益、研究基础和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），自动识别或联合调用全文建构、局部构篇、语言精修、结构审计、语言审计及项目收口。Use when Codex needs to start, continue, finalize, assemble, or prepare submission of a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; distinguish content completion, file locking, integration candidates, and submission readiness; maintain longitudinal and cross-artifact consistency; compare authorized human revisions without overgeneralizing local choices; or preserve facts, attribution, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
 ---
 
 # 医学中文写作
@@ -17,7 +17,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 按以下顺序执行：
 
-> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 区分事实的当前写作使用状态与提交复核状态 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环
+> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 区分事实的当前写作使用状态与提交复核状态 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环 → 完整项目在完成声明或提交准备时执行交付物对账与项目收口
 
 不得先润色局部句子，再倒推全文目的。即使只处理一段文字，也要先识别其所属交付物、章节功能和段落任务。
 
@@ -34,8 +34,9 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - `EVIDENCE_LEDGER.md`：主张、来源、证据状态、引文对应和代表性成果支撑链；
 - `DECISION_LOG.md`：官方要求、用户确认、系统推定和废止决定；
 - `OUTPUT_STYLE.md`：页面、字体、图表、引文和交付格式。
+- `DELIVERABLE_MANIFEST.md`：收口阶段的官方模块、权威文件、可编辑源、提交文件、锁定状态和剩余事项。
 
-建立模块时分别使用 [PROJECT_FACTS.template.md](assets/PROJECT_FACTS.template.md)、[CONTENT_OUTLINE.template.md](assets/CONTENT_OUTLINE.template.md)、[CONSISTENCY_LEDGER.template.md](assets/CONSISTENCY_LEDGER.template.md)、[SECTION_BRIEF.template.md](assets/SECTION_BRIEF.template.md)、[EVIDENCE_LEDGER.template.md](assets/EVIDENCE_LEDGER.template.md)、[DECISION_LOG.template.md](assets/DECISION_LOG.template.md) 和 [OUTPUT_STYLE.template.md](assets/OUTPUT_STYLE.template.md)。
+建立模块时分别使用 [PROJECT_FACTS.template.md](assets/PROJECT_FACTS.template.md)、[CONTENT_OUTLINE.template.md](assets/CONTENT_OUTLINE.template.md)、[CONSISTENCY_LEDGER.template.md](assets/CONSISTENCY_LEDGER.template.md)、[SECTION_BRIEF.template.md](assets/SECTION_BRIEF.template.md)、[EVIDENCE_LEDGER.template.md](assets/EVIDENCE_LEDGER.template.md)、[DECISION_LOG.template.md](assets/DECISION_LOG.template.md)、[OUTPUT_STYLE.template.md](assets/OUTPUT_STYLE.template.md) 和 [DELIVERABLE_MANIFEST.template.md](assets/DELIVERABLE_MANIFEST.template.md)。
 
 若不存在主控索引：
 
@@ -121,6 +122,10 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 
 用户只要求语言润色，但完成任务需要删除文献、重排章节、改变篇幅重心或修改核心主张时，不得静默升级权限；先给出推荐处理范围和选择。
 
+### 项目收口 `closeout`
+
+项目收口不是第四种写作层级。用户表示全文已经写完、准备整合、准备提交或投稿时，读取全部活动模块并执行 [project-finalization-and-submission.md](references/project-finalization-and-submission.md)：区分内容形成、内容确认、文件锁定、整合候选、提交就绪和项目归档，建立最终交付物清单，完成跨章节与跨载体终末审计。用户的完成声明只触发集中对账，不自动把未锁定文件、待核实事实或待传播节点升级为提交就绪。
+
 ## 5. 读取适用规范
 
 根据当前任务读取直接参考文件，不要无条件加载全部内容：
@@ -134,11 +139,13 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - 选择 `Grant`：读取 [grant-profile.md](references/grant-profile.md)；
 - `Grant` 中涉及研究方法、技术路线、实施方案、多研究组协作、可行性论证或代表性成果：读取 [grant-methods-and-feasibility.md](references/grant-methods-and-feasibility.md)；
 - `Grant` 中涉及任务分解、课题或研究组设置、项目设置图、任务分解图、技术路线总览图或其他概念性结构图：读取 [grant-task-decomposition-and-diagrams.md](references/grant-task-decomposition-and-diagrams.md)；
+- `Grant` 中涉及进度安排、年度计划、中期目标、甘特图、项目组织实施、保障措施、知识产权、合作权益或风险分析：读取 [grant-schedule-management-and-risk.md](references/grant-schedule-management-and-risk.md)；
 - `Grant` 中涉及创新点、先进性、预期成果、经济社会效益、申报单位研究基础、负责人科研水平、成果归属或时效性科研指标：读取 [grant-innovation-benefits-and-track-record.md](references/grant-innovation-benefits-and-track-record.md)；
 - 选择 `Journal`：读取 [journal-profile.md](references/journal-profile.md)；
 - 涉及结果、疗效、安全性、因果关系、指南推荐、证据比较、前期结果或事实核查：读取 [evidence-and-claims.md](references/evidence-and-claims.md)；
 - 涉及特定体裁、章节或交付物：读取 [genre-and-section-rules.md](references/genre-and-section-rules.md)；
 - 涉及自动路由、审计或用户介入：读取 [routing-and-audits.md](references/routing-and-audits.md)；
+- 涉及全文完成、项目收口、最终整合、提交版、投稿版、交付物盘点或归档：读取 [project-finalization-and-submission.md](references/project-finalization-and-submission.md)；
 - 仅在用户明确要求用优秀范本改进 Skill，或要求比较人工修订稿、吸收明确反馈并校准项目规则或 Skill 时：读取 [exemplar-learning.md](references/exemplar-learning.md)。
 
 日常写作不得主动索要范本。用户提供的参考文本、人工修订稿或定稿只在其明确授权时用于 Skill 经验提炼；单次人工选择默认先作为局部观察，不自动升级为通用规则。
@@ -198,7 +205,8 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 9. Grant研究内容先交代科学目的和有边界的价值，再按当前任务实际需要的证据环节展开，不机械凑齐完整链条；
 10. Grant任务分解先区分组织任务、科学模块、研究阶段和图示节点，并把任务内容与直接关系写入同一叙述单元；
 11. Grant方法、技术路线和可行性章节在成稿前建立方法功能映射，再决定科学模块、技术顺序和细节配额；
-12. 生成后按章节任务书逐项验收。
+12. Grant进度正文与甘特图先建立唯一任务源矩阵，项目风险与方法风险按章节功能控制颗粒度；
+13. 生成后按章节任务书逐项验收。
 
 重写长句时先识别其中的功能单元，删除不推进判断的低价值列举，再按“方法—所解决的问题”或“机制—结果”拆分，补足必要指代和逻辑桥梁，最后检查句长与段落节奏。同一主体和连续动作中允许主语由上下文稳定承接；主体、研究对象、模型层级、时间阶段或行动目的变化时，必须重新锚定主体。不要为了显式主语而在每句重复“本研究”或“本项目”。只把一个长句切成两个、却保留原有逗号串联和名词堆叠，不算完成重构。
 
@@ -239,6 +247,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 4. 用户授权为语言润色，但完成任务需要重大结构调整或删除重要证据；
 5. 后续细化改变已经锁定的科学问题、目标、任务、终点、指标、创新点或定稿文件；
 6. 准备最终提交时仍有未发表结果、敏感内容、待核实数据或合规风险。
+7. 用户宣布全文完成，但主控、账本或交付物仍存在未锁定、待传播或实质冲突，需要集中确定最终权威版本。
 
 确认时集中展示四类结构状态、核心决定、仍属系统推荐的内容和待核实事项。术语统一、普通句序、必要过渡、内容配额核对、字数统计、来源映射和常规审计自动执行，不反复询问。
 
@@ -254,6 +263,7 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 - 主张和引文变化写入 `EVIDENCE_LEDGER.md`；
 - 决策来源与状态写入 `DECISION_LOG.md`；
 - 稳定版式写入 `OUTPUT_STYLE.md`；
+- 收口阶段的权威文件、可编辑源、显示版、提交版和剩余事项写入 `DELIVERABLE_MANIFEST.md`；
 - 主控索引只更新活动任务、模块版本、四类锁定状态和摘要。
 
 回写变更时同时建立传播目标清单。只有当前权威节点、内容型总纲、相关章节任务书或继承切片、受影响的活动文稿和版本状态均已更新或明确登记为无需修改，传播状态才能标记为“已完成”。仅追加变更记录、备注或核对日志，不构成传播完成。已锁定定稿需要修改时，先登记冲突并取得用户授权。
@@ -332,3 +342,13 @@ description: 规划、撰写、重构、润色、压缩、扩写和审校中文�
 64. Grant预期效益是否由已锁定成果和指标向外推导，技术价值是否落到新的过程、关系或判断，且未新增销售、产品、临床推广或患者获益承诺。
 65. 代表性成果是否在内部保留精确归属；正文省略作者位次时，是否使用不会暗示个人独立完成的主体和动词。
 66. 人工稿中未发生修改的内容是否只记为“本轮未处理”，而非未经用户确认就推断为主动认可。
+67. Grant进度正文、甘特图、中期目标、考核指标和成果是否来自同一任务源矩阵，且未各自形成不同安排。
+68. 进度安排的组织轴、任务数量和周期是否来自官方要求或已确认分工，未照搬范本的课题数、行数、颜色和年份。
+69. 甘特图是否使用含义明确的时间单元和视觉编码，并同时保留可编辑源与经过渲染核验的正式显示版本。
+70. 方法章节中的具体失败风险与项目级风险分析是否按不同外部任务和颗粒度处理。
+71. 项目级风险是否形成风险描述与对策的对应，同时未用过细实验清单或空泛管理口号代替实际风险判断。
+72. 用户宣布全文完成或准备提交时，是否执行项目收口和交付物对账，而非自动把全部章节升级为终稿。
+73. 内容形成、内容确认、文件锁定、整合候选、提交就绪和项目归档是否分别记录。
+74. 最终交付物是否具有唯一权威版本、最新摘要、可编辑源、正式显示或提交文件及剩余事项。
+75. 摘要、正文、表格、图示、附件和系统字段是否使用同一权威节点与任务版本。
+76. 历史工作稿是否与活动权威文件分离，且未进入提交包或公开发布包。

@@ -1,4 +1,4 @@
 interface:
   display_name: "医学中文写作"
-  short_description: "统筹结构、事实状态、任务关系和证据边界的医学中文写作系统"
-  default_prompt: "使用 $write-medical-chinese 读取项目主控、事实状态与总纲，选择 Grant 或 Journal，并完成正文或结构审计。"
+  short_description: "覆盖结构、一致性、交付物收口和提交准备的医学中文写作系统"
+  default_prompt: "使用 $write-medical-chinese 读取项目主控与总纲，选择 Grant 或 Journal，并完成写作、审计或项目收口。"
