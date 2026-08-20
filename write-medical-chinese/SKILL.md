@@ -1,6 +1,6 @@
 ---
 name: write-medical-chinese
-description: 规划、撰写、重构、润色、压缩、扩写、收口和审校中文医学文本，并为持续项目建立写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本、决策记录和最终交付物清单。支持 Grant（医学基金标书、项目申请、研究目标、任务分解、技术路线、进度与甘特图、项目管理、风险分析、创新性、预期效益、研究基础和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），自动识别或联合调用全文建构、局部构篇、语言精修、结构审计、语言审计及项目收口。Use when Codex needs to start, continue, finalize, assemble, or prepare submission of a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; distinguish content completion, file locking, integration candidates, and submission readiness; maintain longitudinal and cross-artifact consistency; compare authorized human revisions without overgeneralizing local choices; or preserve facts, attribution, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
+description: 规划、撰写、重构、润色、压缩、扩写、收口和审校中文医学文本，并为持续项目建立写作主控索引、内容型总纲、全文一致性账本、章节任务书、证据账本、决策记录和最终交付物清单。支持 Grant（医学基金标书、项目申请、研究目标、任务分解、技术路线、进度与甘特图、项目管理、风险分析、结构化表格、代表性成果、创新性、预期效益、研究基础和可行性论证）与 Journal（毕业论文、期刊论文、综述、病例报告、指南解读和学术报告），自动识别或联合调用全文建构、局部构篇、语言精修、结构审计、语言审计及项目收口。Use when Codex needs to start, continue, finalize, assemble, or prepare submission of a Chinese biomedical document from guidelines, outlines, notes, literature, data, preliminary results, human-edited finals, or finalized sections; atomize sentence-level requirements and structured subdeliverables; preserve row-level lineage across related tables and cross-artifact consistency; distinguish content completion, file locking, integration candidates, and submission readiness; compare authorized human revisions without overgeneralizing local choices; or preserve facts, attribution, citations, evidence strength, causal boundaries, scope, narrative coherence, and reader comprehension.
 ---
 
 # 医学中文写作
@@ -17,7 +17,7 @@ description: 规划、撰写、重构、润色、压缩、扩写、收口和审�
 
 按以下顺序执行：
 
-> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 区分事实的当前写作使用状态与提交复核状态 → 获取指南与现有材料 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环 → 完整项目在完成声明或提交准备时执行交付物对账与项目收口
+> 读取或建立写作主控索引 → 核验当前权威来源的身份与版本 → 按需读取项目控制模块 → 区分事实的当前写作使用状态与提交复核状态 → 获取指南与现有材料并原子化正文、表格、图示、附件和系统字段要求 → 确定活动交付物及 Grant/Journal → 建立或更新内容型总纲与全文一致性账本 → 读取当前章节继承切片 → 锁定章节外部任务与禁止任务 → 选择全文建构、局部构篇或语言精修 → 应用内置叙事基线 → 结构与纵向一致性审计 → 专业可读性与语言审计 → 回写已确认的项目级决策并完成传播闭环 → 完整项目在完成声明或提交准备时执行交付物对账与项目收口
 
 不得先润色局部句子，再倒推全文目的。即使只处理一段文字，也要先识别其所属交付物、章节功能和段落任务。
 
@@ -144,6 +144,7 @@ description: 规划、撰写、重构、润色、压缩、扩写、收口和审�
 - 选择 `Journal`：读取 [journal-profile.md](references/journal-profile.md)；
 - 涉及结果、疗效、安全性、因果关系、指南推荐、证据比较、前期结果或事实核查：读取 [evidence-and-claims.md](references/evidence-and-claims.md)；
 - 涉及特定体裁、章节或交付物：读取 [genre-and-section-rules.md](references/genre-and-section-rules.md)；
+- 涉及表格、清单、代表性成果、典型案例、机构比较、固定数量、附属交付物、跨表遴选、向定稿增量补写或同类对象版式诊断：读取 [structured-deliverables-and-table-lineage.md](references/structured-deliverables-and-table-lineage.md)；
 - 涉及自动路由、审计或用户介入：读取 [routing-and-audits.md](references/routing-and-audits.md)；
 - 涉及全文完成、项目收口、最终整合、提交版、投稿版、交付物盘点或归档：读取 [project-finalization-and-submission.md](references/project-finalization-and-submission.md)；
 - 仅在用户明确要求用优秀范本改进 Skill，或要求比较人工修订稿、吸收明确反馈并校准项目规则或 Skill 时：读取 [exemplar-learning.md](references/exemplar-learning.md)。
@@ -206,7 +207,8 @@ description: 规划、撰写、重构、润色、压缩、扩写、收口和审�
 10. Grant任务分解先区分组织任务、科学模块、研究阶段和图示节点，并把任务内容与直接关系写入同一叙述单元；
 11. Grant方法、技术路线和可行性章节在成稿前建立方法功能映射，再决定科学模块、技术顺序和细节配额；
 12. Grant进度正文与甘特图先建立唯一任务源矩阵，项目风险与方法风险按章节功能控制颗粒度；
-13. 生成后按章节任务书逐项验收。
+13. 结构化表格或清单先锁定对象范围、上游候选池、表间关系、准入和排序规则；属于遴选或汇总时逐行保留来源映射；
+14. 生成后按章节任务书和要求原子逐项验收。
 
 重写长句时先识别其中的功能单元，删除不推进判断的低价值列举，再按“方法—所解决的问题”或“机制—结果”拆分，补足必要指代和逻辑桥梁，最后检查句长与段落节奏。同一主体和连续动作中允许主语由上下文稳定承接；主体、研究对象、模型层级、时间阶段或行动目的变化时，必须重新锚定主体。不要为了显式主语而在每句重复“本研究”或“本项目”。只把一个长句切成两个、却保留原有逗号串联和名词堆叠，不算完成重构。
 
@@ -352,3 +354,12 @@ description: 规划、撰写、重构、润色、压缩、扩写、收口和审�
 74. 最终交付物是否具有唯一权威版本、最新摘要、可编辑源、正式显示或提交文件及剩余事项。
 75. 摘要、正文、表格、图示、附件和系统字段是否使用同一权威节点与任务版本。
 76. 历史工作稿是否与活动权威文件分离，且未进入提交包或公开发布包。
+77. 指南同一句中的正文、表格、图示、附件、固定数量和附加动作是否已经拆成独立要求原子并分别验收。
+78. 结构化交付物的对象范围、来源池和证据归属是否明确；实质歧义是否在检索或成稿前集中确认。
+79. 下游遴选、汇总或对应表是否逐行回溯规定的上游表或证据池，且未另起未经解释的候选池。
+80. 候选项目是否先通过相关性、来源和证据等硬性准入，再按官方或已确认的软性规则排序；期刊或影响力指标是否未替代科学判断。
+81. 向已锁定文档补入遗漏内容时，是否保护未授权范围、重新计算摘要、更新生命周期状态并完成渲染核验。
+82. 新增同类表格或表题是否继承相邻对象的宽度、字体、段落和分页契约，具体尺寸及颜色是否保持正确作用域。
+83. DOCX混合中西文和数字的字体是否同时核验 `eastAsia`、`ascii`、`hAnsi`、样式继承和实际渲染，未仅依据单一字体属性判断。
+84. 用户只要求审计原因时是否保持只读，并区分症状、直接原因、根因、影响范围和正确目标。
+85. 团队已发表工作是否通过当前问题与未决缺口自然进入章节主线，且未把相邻基础写成对本项目问题的直接证据。
